@@ -36,5 +36,13 @@
 </div>
 
 <hr>
+<span *ngFor="let num of methodThatReturnsArray()"> {{num | currency}} || </span>
 
-<span *ngFor="let num of methodThatReturnsArray()"> {{num}} || </span>
+<hr>
+<button (click)="logEvent($event)">Console Log Event Object</button>
+
+<h3 [ngStyle]="{'color': 'red', 'font-family': 'monospace'}">ngStyle Example</h3>
+<h3 [ngStyle]="styleObject">ngStyle Example</h3>
+
+<button [ngClass]="'color-one font-one'">ngClass Example</button>
+<button [ngClass]="{'color-two': true, 'font-two': !isHungry}">ngClass Example</button>

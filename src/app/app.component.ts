@@ -16,7 +16,7 @@ export class AppComponent {
  animal:string = "INSERT ANIMAL";
  verb:string = "INSERT VERB";
 
- isHungry: boolean = true;
+ isHungry: boolean = false;
 
  names: string[] = ["Garret", "Holly", "Matt", "Tyler", "Sam"];
 
@@ -33,8 +33,18 @@ export class AppComponent {
   }
  ];
 
+ styleObject: Object = {
+  'color': 'navy',
+  'background-color': !this.isHungry ? 'beige' : 'grey'
+ }
+
 
  methodThatReturnsArray(): number[] {
   return[99, 22, 55, 5, 19];
  }
-}
+
+ logEvent(event: Event): void{
+  console.log(event);
+  }
+ }
+
